@@ -1,12 +1,23 @@
 import {useForm} from 'react-hook-form'
-import { registerRequest } from '../api/auth';
+import { useAuth } from '../context/authContext';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function RegisterPage() {
 
-    const {register, handleSubmit} = useForm();
+    const {register, handleSubmit, formState: { errors }} = useForm();
+    const {signup, isAuthenticated} = useAuth();
+    const navigation = useNavigate()
+    
+    useEffect(() => {
+        if(isAuthenticated) {
+            console.log('Navigating to /tasks');   
+            navigation('/tasks');
+        }
+    }, [isAuthenticated]);
+
     const onSubmit = handleSubmit( async values => {
-        const res = await registerRequest(values);
-        console.log(res);
+        signup(values)
     });
 
     return(
@@ -17,6 +28,13 @@ function RegisterPage() {
                     className='w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2'
                     placeholder='username'
                 />
+
+                {
+                    errors.username && (
+                        <p className='text-red-500'>Username is required</p>
+                    )
+                }
+
                 <input type="email" {...register('email', {required: true})}
                     className='w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2'
                     placeholder='email'
