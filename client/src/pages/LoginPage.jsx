@@ -11,17 +11,15 @@ function LoginPage() {
     const {signin, isAuthenticated ,errors: loginErrors} = useAuth();
     const navigation = useNavigate()
     
-    // useEffect(() => {
-    //     if(isAuthenticated) {
-    //         console.log('Navigating to /tasks');   
-    //         navigation('/tasks');
-    //     }
-    // }, [isAuthenticated]);
-
     const onSubmit = handleSubmit((data) => {
-        signin(data);
-        console.log(data);
+        signin(data);  
     })
+
+    useEffect(() => {
+        if(isAuthenticated) {
+            navigation('/tasks');
+        }
+    }, [isAuthenticated]);
 
     return(
         <div className='flex h-[calc(100vh-100px)] items-center justify-center'>
