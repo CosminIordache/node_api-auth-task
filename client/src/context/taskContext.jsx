@@ -50,13 +50,13 @@ export function TasksProvider({children}){
         
         }catch(err){
             console.error(err);
+            return null;
         }
     };
 
     const updateTask = async (id, task) => {
         try{
             await updateTaskRequest(id, task);
-            return res.data;
         }catch(err){
             console.error(err);
         }

@@ -17,8 +17,10 @@ function TasksFormPage() {
       if (params.id){
         const task = await getTask(params.id);
         console.log(task)
-        setValue('title', task.title)
-        setValue('description', task.description)
+        if (task) {
+          setValue('title', task.title);
+          setValue('description', task.description);
+        }
       }
     }
     loadTask();
