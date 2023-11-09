@@ -11,12 +11,12 @@ function LoginPage() {
     const {signin, isAuthenticated ,errors: loginErrors} = useAuth();
     const navigation = useNavigate()
     
-    useEffect(() => {
-        if(isAuthenticated) {
-            console.log('Navigating to /tasks');   
-            navigation('/tasks');
-        }
-    }, [isAuthenticated]);
+    // useEffect(() => {
+    //     if(isAuthenticated) {
+    //         console.log('Navigating to /tasks');   
+    //         navigation('/tasks');
+    //     }
+    // }, [isAuthenticated]);
 
     const onSubmit = handleSubmit((data) => {
         signin(data);
