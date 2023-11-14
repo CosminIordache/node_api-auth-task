@@ -43,8 +43,8 @@ Una vez instalado y cambiado de verion instalaremos todos las librerias utilizad
 npm install
 ```
 
-#### Hay que tener en cuenta que hay que utilizar una base de datos propia
-###### Para cambiar la base de datos hay que ir al archivo db.js
+### Hay que tener en cuenta que hay que utilizar una base de datos propia
+##### Para cambiar la base de datos hay que ir al archivo db.js
 
 Para la ejecucion del back-end entraremos en la carpeta src/ 
 
