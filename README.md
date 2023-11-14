@@ -2,9 +2,7 @@
 ### NodeJS + React
 
 Primero de todo hacemos un update y upgrade al sistema
-```bash
-sudo apt update
-```
+```bashsudo apt update```
 ```bash  sudo apt upgrade ```
 
 Para la ejecucion del codigo necesitamos instalar nodejs, version 21.1.0 !!!
