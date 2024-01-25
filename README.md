@@ -43,9 +43,6 @@ Una vez instalado y cambiado de verion instalaremos todos las librerias utilizad
 npm install
 ```
 
-### Hay que tener en cuenta que hay que utilizar una base de datos propia
-##### Para cambiar la base de datos hay que ir al archivo db.js
-
 ### MongoDB Cluster + Docker Compose
 
 Levantamos los contenedores
