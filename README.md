@@ -1,5 +1,5 @@
 # Proyecto back-end BDA
-### NodeJS + React
+### NodeJS + React + MongoDB Cluster
 
 Primero de todo hacemos un update y upgrade al sistema
 ```bash 
@@ -77,7 +77,7 @@ Comprobaremos que sigue funcionando.
 docker exec -it mongo2 mongosh --eval "rs.status()"
 ```
 
-### Arrancamos el projecto
+## Arrancamos el projecto
 
 Para la ejecucion del back-end entraremos en la carpeta src/ 
 
