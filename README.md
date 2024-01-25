@@ -44,6 +44,12 @@ npm install
 ```
 
 ## MongoDB Cluster + Docker Compose
+Este cluster de MongoDB esta configurado para que la información de cada nodo se guarde en una carpeta local del sistema llamada data/mongo[1,2,3] dependiendo del nodo.
+
+Iremos a la carpeta docker
+```bash
+cd docker/
+```
 
 Levantamos los contenedores
 ```bash
