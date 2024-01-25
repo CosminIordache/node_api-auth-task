@@ -43,7 +43,7 @@ Una vez instalado y cambiado de verion instalaremos todos las librerias utilizad
 npm install
 ```
 
-### MongoDB Cluster + Docker Compose
+## MongoDB Cluster + Docker Compose
 
 Levantamos los contenedores
 ```bash
@@ -77,10 +77,12 @@ Comprobaremos que sigue funcionando.
 docker exec -it mongo2 mongosh --eval "rs.status()"
 ```
 
+### Arrancamos el projecto
+
 Para la ejecucion del back-end entraremos en la carpeta src/ 
 
 ```bash  
-cd code/node_api-auth-task/src
+cd /node_api-auth-task/src
 ```
 
 Y ejecutaremos el siguente comando
@@ -92,7 +94,7 @@ npm run dev
 Para la ejecucion de front-end entraremos en la carpera client/
 
 ```bash  
-cd code/node_api-auth-task/client
+cd /node_api-auth-task/client
  ```
 
 Y ejecutaremos el siguente comando
